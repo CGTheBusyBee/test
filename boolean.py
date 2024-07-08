@@ -47,3 +47,9 @@ x = v != w
 print(v, w)
 
 print(f"exercise 5, answer: {x}")
+
+
+
+
+
+
