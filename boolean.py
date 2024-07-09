@@ -49,7 +49,7 @@ print(v, w)
 print(f"exercise 5, answer: {x}")
 
 
-
+print("hello")
 
 
 
