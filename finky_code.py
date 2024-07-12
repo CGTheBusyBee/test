@@ -1,4 +1,4 @@
-char = "hello"
+char = "v.v"
 
 print(f" {char*4}")
 print(f"{char} ")

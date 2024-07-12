@@ -1,6 +1,10 @@
+# We want to make sure that whatever the input is will erase all unecessary spaces and uppercase every single letter
+
 sentence1 = input("Please enter a sentence: ")
 sentence1_formatted = sentence1.strip().upper()
 print(sentence1_formatted)
+
+# We want to count each word in the paragraph written
 
 paragraph1 = input("Please enter a paragraph: ")
 paragraph1_formatted = (paragraph1.strip().capitalize().count(" ")+1)
