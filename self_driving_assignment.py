@@ -1,5 +1,4 @@
 
-
 def move_forward():
     print("moving forward")
 
@@ -21,8 +20,7 @@ def navigate():
 navigate()
 
 destination = input("Where do you want to go: ").strip().lower()
-
-
+ 
 move_forward()
 
 if destination == "library":
