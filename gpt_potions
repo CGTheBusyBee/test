@@ -1,0 +1,41 @@
+# Dictionary containing potions and their ingredients
+potions = {
+    "Invisibility Potion": ["Moonstone", "Dragon scale", "Fairy dust"],
+    "Flying Potion": ["Phoenix feather", "Troll tooth", "Mermaid scale"],
+    "Healing Potion": ["Unicorn horn", "Elf hair", "Golden apple"]
+}
+
+# Display the list of potions
+print("Welcome to the Potion Shop! Here are the available potions:")
+for i, potion in enumerate(potions.keys(), start=1):
+    print(f"{i}. {potion}")
+
+# Ask the user to choose a potion
+chosen_potion_index = int(input("Please choose a potion by entering the corresponding number: ")) - 1
+chosen_potion_name = list(potions.keys())[chosen_potion_index]
+chosen_potion_ingredients = potions[chosen_potion_name]
+
+print(f"\nYou have chosen the {chosen_potion_name}.")
+print("The ingredients required for this potion are:")
+for ingredient in chosen_potion_ingredients:
+    print(f"- {ingredient}")
+
+# Use a while loop to "buy" each ingredient one by one
+purchased_ingredients = []
+while len(purchased_ingredients) < len(chosen_potion_ingredients):
+    next_ingredient = chosen_potion_ingredients[len(purchased_ingredients)]
+    buy_choice = input(f"Do you want to buy the next ingredient: {next_ingredient}? (yes/no): ").strip().lower()
+    
+    if buy_choice == 'yes':
+        purchased_ingredients.append(next_ingredient)
+        print(f"Successfully bought {next_ingredient}.")
+    else:
+        print("You chose to stop shopping.")
+        break
+
+# Check if all ingredients were bought
+if len(purchased_ingredients) == len(chosen_potion_ingredients):
+    print(f"\nCongratulations! You have bought all the ingredients for the {chosen_potion_name}.")
+else:
+    print(f"\nYou did not buy all the ingredients for the {chosen_potion_name}.")
+
